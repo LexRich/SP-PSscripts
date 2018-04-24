@@ -1,2 +1,6 @@
 password.txt
-
+CompareArrays.ps1
+CopyListToQNAP.ps1
+ExchSession.ps1
+GetMailBoxes.ps1
+GetUsersToDel.ps1
