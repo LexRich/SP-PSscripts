@@ -20,3 +20,4 @@ New-SSHSession -ComputerName 192.168.0.20 -Credential $credential -AcceptKey $tr
 Invoke-SSHCommand -Index 0 -Command "cd /share/MD0_DATA/homes/DOMAIN=SP; ./test.sh $users"
 
 Remove-SSHSession -Index 0
+
