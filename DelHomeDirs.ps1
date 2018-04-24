@@ -8,7 +8,6 @@ foreach ($user in $users){
         Remove-Item "$userpath" -Force -Recurse -ErrorAction SilentlyContinue -WhatIf
     
 }
-<<<<<<< HEAD:DelHomeDirs.ps1
 
 $password = Get-Content .\password.txt
 $password = $password | ConvertTo-SecureString
@@ -21,5 +20,3 @@ New-SSHSession -ComputerName 192.168.0.20 -Credential $credential -AcceptKey $tr
 Invoke-SSHCommand -Index 0 -Command "cd /share/MD0_DATA/homes/DOMAIN=SP; ./test.sh $users"
 
 Remove-SSHSession -Index 0
-=======
->>>>>>> aecc52a039a6fe957ebd6faba3f672806a472373:RemoveHomeDirs.ps1
