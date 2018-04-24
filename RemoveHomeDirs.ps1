@@ -1,5 +1,4 @@
-﻿
-$query = Get-ADUser -SearchBase 'OU=Testing,DC=net,DC=stroypark,DC=su' -Filter {Enabled -eq "False"}
+﻿$query = Get-ADUser -SearchBase 'OU=Testing,DC=net,DC=stroypark,DC=su' -Filter {Enabled -eq "False"}
 $users = $query.SamAccountName | Tee-Object -f D:\dirs.txt
 #$users = Get-ChildItem D:\Users
 foreach ($user in $users){
@@ -20,4 +19,3 @@ New-SSHSession -ComputerName 192.168.0.20 -Credential $credential -AcceptKey $tr
 Invoke-SSHCommand -Index 0 -Command "cd /share/MD0_DATA/homes/DOMAIN=SP; ./test.sh $users"
 
 Remove-SSHSession -Index 0
-
